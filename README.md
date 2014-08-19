@@ -14,10 +14,27 @@ Install from git (do this in your modulepath):
 
     git clone https://github.com/badgerious/puppet-windows-env windows_env
 
+This module also requires the 'ffi' gem. This gem is included
+with Puppet 3.3.0+. On older versions, you'll need to do something like:
+
+```puppet
+
+package { 'ffi':
+  ensure   => installed,
+  provider => gem,
+}
+
+```
+
 Changes
 -------
 
 [CHANGELOG.md](https://github.com/badgerious/puppet-windows-env/blob/master/CHANGELOG.md)
+
+Compatibility
+-------------
+
+Puppet 3.7 or greater requires version 2.2.0 or greater of this module.
 
 Usage
 -----
